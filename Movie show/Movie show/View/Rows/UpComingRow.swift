@@ -31,35 +31,35 @@ class UpcomingRow: UITableViewCell {
         timer = Timer.scheduledTimer(timeInterval: 3, target: self , selector: #selector(moveToNextItem) , userInfo: nil, repeats: true)
 
     }
-    
+
     @objc func moveToNextItem(){
-        
-        
-        
+
+
+
         let lastItem = upcomingCollectionView.indexPathsForVisibleItems.last
         let currentItem = IndexPath(item: lastItem?.item ?? movies.count, section: 0)
         upcomingCollectionView.scrollToItem(at: currentItem, at: .right, animated: true)
         var nextItem = currentItem.item + 1
-        
+
         if nextItem == movies.count
         {
-            
+
             nextItem = 0
         }
         let nextIndexPath = IndexPath(item: nextItem, section: 0)
         upcomingCollectionView.scrollToItem(at: nextIndexPath, at: .right, animated: true)
 
-        
-        
-        
+
+
+
 //        upcomingCollectionView.scrollToItem(at: IndexPath(item: movies.count, section:0), at: .centeredHorizontally, animated: true)
-        
-        
+
+
     }
+
     
     
     
-    //
     private func loadUpcomingData(onPage page: Int = 1) {
         
         guard !cancelRequest else { return }

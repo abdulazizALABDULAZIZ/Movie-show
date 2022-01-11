@@ -22,6 +22,9 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
         //self.movies.removeAll()
         searchController.delegate = self
         
+        self.setupToHideKeyboardOnTapOnView()
+
+        
         
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
@@ -75,6 +78,8 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     
 
+   
+    
     /*
     // MARK: - Navigation
 
@@ -87,4 +92,21 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
 
 }
 
+// dismiss Keyboard for search Bar
+
+extension UIViewController {
+    func setupToHideKeyboardOnTapOnView()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboards() {
+        view.endEditing(true)
+    }
+}
 

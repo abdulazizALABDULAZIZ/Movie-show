@@ -2,7 +2,7 @@
 //  Extensions.swift
 //  Movie show
 //
-//  Created by MACBOOK on 20/05/1443 AH.
+//  Created by MACBOOK on 04/05/1443 AH.
 //
 
 import Foundation
@@ -75,8 +75,8 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    //Creates an alert for connection
+    @objc 
+    //Cr@objc @objc @objc @objc @objc @objc eates an alert for connection
     func connectionAlert() {
         let alert = UIAlertController(title: "Uh Oh", message: "You have no network connection. Please try connecting again.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

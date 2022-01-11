@@ -19,6 +19,7 @@ class LiveStreamingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
         setupVidewPlayer()
@@ -34,7 +35,7 @@ class LiveStreamingViewController: UIViewController {
     
     @IBAction func playButtonTapped(_ sender: Any) {
         
-        guard let text = textField.text,
+        guard let _ = textField.text,
               
         let url = URL(string: "https://dminnvll.cdn.mangomolo.com/dubaione/smil:dubaione.stream.smil/playlist.m3u8") else {
             

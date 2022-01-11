@@ -7,6 +7,8 @@
 
 import UIKit
 import SafariServices
+import Firebase
+import FirebaseFirestore
 
 
 class DetailViewController: UIViewController {
@@ -24,6 +26,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var trailersCollection: UICollectionView!
     //@IBOutlet weak var videoViewHeight: NSLayoutConstraint!
     //@IBOutlet weak var castViewHeight: NSLayoutConstraint!
+
+
     
     // MARK: - Properties
     
@@ -33,6 +37,63 @@ class DetailViewController: UIViewController {
     var cast:[Cast]?
     var videoList:[Videos]?
     
+    let db = Firestore.firestore()
+    var isActive:Bool = false
+    
+    @IBOutlet weak var changeButton: UIButton!
+    @IBAction func addToFav(_ sender: UIButton) {
+        
+        if isActive {
+            
+            isActive = false
+            changeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        } else {
+            
+            isActive = true
+            changeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
+    
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            
+            var favsData = ["favs": []]
+            
+            
+           let doc =  db.collection("Favorites").document(uid)
+            doc.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    print("Document data: \(dataDescription)")
+                    favsData = document.data() as? [String : [Any]] ?? [String: [Any]]()
+                    favsData["favs"]?.append(self.movieID ?? 0)
+                    self.saveFavsToFireStore(favsData: favsData)
+                } else {
+                    print("Document does not exist")
+                }
+            }
+        
+            
+        }
+        
+        let alert = UIAlertController(title: "Favorites", message: "Done to add the Movies to Favorites", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    func saveFavsToFireStore(favsData : [String : Any]){
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            db.collection("Favorites").document(uid).setData(favsData, merge: true,  completion: { error in
+                
+                if let error = error {
+                    print(error)
+                }
+                
+            })
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

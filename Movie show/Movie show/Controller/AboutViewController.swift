@@ -46,8 +46,8 @@ class AboutViewController: UIViewController,MFMailComposeViewControllerDelegate 
         }
     }
     
-    @IBAction func movieApiLink(_ sender: Any) {
-        if let url = URL(string: "https://www.themoviedb.org/documentation/api") {
+    @IBAction func twitterLink(_ sender: Any) {
+        if let url = URL(string: "https://twitter.com/iA3z7") {
             UIApplication.shared.open(url, options: [:])
         }
     }

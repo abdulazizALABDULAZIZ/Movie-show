@@ -74,8 +74,16 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        dismissKeyboard()
+        setupToHideKeyboardOnTapOnViews()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let uid = Auth.auth().currentUser?.uid {
+            performSegue(withIdentifier: "ToHomeTB", sender: nil)
+        }
+    }
+    
     
 //    // and this
     @objc func dimissKeyboard(_ sender : Any?) {
@@ -87,7 +95,7 @@ class SignInViewController: UIViewController {
     @IBAction func loginActionButton(_ sender: Any) {
         
 //        print("\(userSign.text)and\(userPassword.text)")
-        print("\(userSign.text)and\(userPassword.text)")
+//        print("\(userSign.text)and\(userPassword.text)")
         SignIn(email: userSign.text ?? "", password: userPassword.text ?? "")
         
     }
@@ -132,5 +140,22 @@ class SignInViewController: UIViewController {
     }
 
     }
+
+
+extension SignInViewController {
+    func setupToHideKeyboardOnTapOnViews()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc override func dismissKeyboards() {
+        view.endEditing(true)
+    }
+}
 
     

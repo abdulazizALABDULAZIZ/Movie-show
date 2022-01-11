@@ -23,35 +23,35 @@ class TvViewController: UIViewController {
         super.viewDidLoad()
         onAirCollectionView.reloadData()
         loadLatestTvData()
-        startTimer()
+        startTimers()
     }
     
-    private func startTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self , selector: #selector(moveToNextItem) , userInfo: nil, repeats: true)
+    private func startTimers(){
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self , selector: #selector(moveToNextItems) , userInfo: nil, repeats: true)
 
     }
-    
-     @objc func moveToNextItem(){
-        
-        
-        
+
+     @objc func moveToNextItems(){
+
+
+
         let lastItem = onAirCollectionView.indexPathsForVisibleItems.last
-        let currentItem = IndexPath(item: lastItem?.item ?? shows.count, section: 0)
-        onAirCollectionView.scrollToItem(at: currentItem, at: .right, animated: true)
-        var nextItem = currentItem.item + 1
-        
-        if nextItem == shows.count
+        let currentItems = IndexPath(item: lastItem?.item ?? shows.count, section: 0)
+        onAirCollectionView.scrollToItem(at: currentItems, at: .right, animated: true)
+        var nextItems = currentItems.item + 1
+
+        if nextItems == shows.count
         {
-            
-            nextItem = 0
+
+            nextItems = 0
         }
-        let nextIndexPath = IndexPath(item: nextItem, section: 0)
+        let nextIndexPath = IndexPath(item: nextItems, section: 0)
         onAirCollectionView.scrollToItem(at: nextIndexPath, at: .right, animated: true)
 
-        
-        
+
+
     }
-    
+//////
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
