@@ -163,6 +163,8 @@
 		FA0A15CB2779B6FC00E97612 /* StreamingVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingVideoPlayer.swift; sourceTree = "<group>"; };
 		FA0A15CD2779B76900E97612 /* LiveStreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamingViewController.swift; sourceTree = "<group>"; };
 		FA834119278589CA0018FEF5 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		FA8C6B662793036D00E44D34 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		FA8C6B672793036D00E44D34 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FAA89E6527608885004CE898 /* Movie show.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie show.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA89E6827608885004CE898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA89E6A27608885004CE898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -341,13 +343,6 @@
 			path = StreamingKitTests;
 			sourceTree = "<group>";
 		};
-		FA9B4D382781BD8D00FF8350 /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animation;
-			sourceTree = "<group>";
-		};
 		FAA89E5C27608885004CE898 = {
 			isa = PBXGroup;
 			children = (
@@ -386,7 +381,6 @@
 				FAA89E7127608887004CE898 /* Assets.xcassets */,
 				FAA89E7327608887004CE898 /* LaunchScreen.storyboard */,
 				FAA89E7627608887004CE898 /* Info.plist */,
-				FA9B4D382781BD8D00FF8350 /* Animation */,
 				FAA89E962761DED8004CE898 /* SignControllers */,
 			);
 			path = "Movie show";
@@ -506,6 +500,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = FAA89E5C27608885004CE898;
 			packageReferences = (
@@ -650,6 +645,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FAA89E6F27608885004CE898 /* Base */,
+				FA8C6B662793036D00E44D34 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -658,6 +654,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FAA89E7427608887004CE898 /* Base */,
+				FA8C6B672793036D00E44D34 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -775,6 +772,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -836,6 +834,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

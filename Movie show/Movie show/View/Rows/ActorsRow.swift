@@ -95,7 +95,7 @@ extension ActorsRow: UICollectionViewDataSource, UICollectionViewDataSourcePrefe
     }
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        // Begin asynchronously fetching data for the requested index paths.
+        // Beging asynchronously fetching data for the requested index paths.
         for item in indexPaths {
             print ( "Prefetching Rows: \( item.row)" )
         }

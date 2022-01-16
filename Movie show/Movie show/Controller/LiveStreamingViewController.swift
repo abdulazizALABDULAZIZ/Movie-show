@@ -11,7 +11,7 @@ import StreamingKit
 
 class LiveStreamingViewController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
+
     @IBOutlet weak var grayView: UIView!
     
     private let videoPlayer = StreamingVideoPlayer()
@@ -35,7 +35,7 @@ class LiveStreamingViewController: UIViewController {
     
     @IBAction func playButtonTapped(_ sender: Any) {
         
-        guard let _ = textField.text,
+        guard let _ = URL(string: "https://dminnvll.cdn.mangomolo.com/dubaione/smil:dubaione.stream.smil/playlist.m3u8"),
               
         let url = URL(string: "https://dminnvll.cdn.mangomolo.com/dubaione/smil:dubaione.stream.smil/playlist.m3u8") else {
             
@@ -55,8 +55,9 @@ class LiveStreamingViewController: UIViewController {
     
     @IBAction func clearButtonTapped(_ sender: Any) {
         
-        textField.text = nil
-        videoPlayer.pause()
+//        textField.text = nil
+        let url = URL(string: "https://dminnvll.cdn.mangomolo.com/dubaione/smil:dubaione.stream.smil/playlist.m3u8")!
+        videoPlayer.play(url: url)
     }
     
     

@@ -173,7 +173,7 @@ class Service {
             }
             }.resume()
     }
-////////////////////////////////////////////////////////////////////////////////////////////////
+// // // //  // // // // // // // // // //
     // MARK: Notes - May want to refactor this later into the same style above.
     
     // MARK: Simplistic version of requesting data

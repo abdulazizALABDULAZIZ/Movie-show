@@ -1,0 +1,177 @@
+
+/* Class = "UILabel"; text = "Air Date:"; ObjectID = "2kP-ap-0Sz"; */
+"2kP-ap-0Sz.text" = "تاريخ العرض:";
+
+/* Class = "UITabBarItem"; title = "Live streaming"; ObjectID = "6D6-V1-I7k"; */
+"6D6-V1-I7k.title" = "البث المباشر";
+
+/* Class = "UILabel"; text = "Registration"; ObjectID = "76P-fj-byg"; */
+"76P-fj-byg.text" = "تسجيل";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "7TV-9c-cnS"; */
+"7TV-9c-cnS.configuration.title" = "تسجيل دخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7TV-9c-cnS"; */
+"7TV-9c-cnS.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Runtime: N/A"; ObjectID = "8Sp-Qr-gVr"; */
+"8Sp-Qr-gVr.text" = "Runtime: N/A";
+
+/* Class = "UIButton"; configuration.title = "Sign Out"; ObjectID = "8kB-iO-KPn"; */
+"8kB-iO-KPn.configuration.title" = "تسجيل خروج";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8kB-iO-KPn"; */
+"8kB-iO-KPn.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "A04-lY-1Xh"; */
+"A04-lY-1Xh.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Videos"; ObjectID = "Ahh-XB-QRS"; */
+"Ahh-XB-QRS.text" = "الفيديو";
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "Bis-eF-gCT"; */
+"Bis-eF-gCT.title" = "البحث";
+
+/* Class = "UITabBarItem"; title = "Movies"; ObjectID = "CMT-Ay-7W2"; */
+"CMT-Ay-7W2.title" = "الافلام";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "FGg-zT-pcc"; */
+"FGg-zT-pcc.text" = "العنوان";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "Fwc-8w-tkw"; */
+"Fwc-8w-tkw.title" = "Edit";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "GnC-Yu-Q2Q"; */
+"GnC-Yu-Q2Q.placeholder" = "البريد الالكتروني";
+
+/* Class = "UISearchBar"; placeholder = "Search for movies"; ObjectID = "HIv-tj-dPD"; */
+"HIv-tj-dPD.placeholder" = "ابحث عن الافلام";
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "HlD-O3-PAk"; */
+"HlD-O3-PAk.configuration.title" = "تسجيل دخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HlD-O3-PAk"; */
+"HlD-O3-PAk.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "JNs-lb-rCQ"; */
+"JNs-lb-rCQ.text" = "العنوان";
+
+/* Class = "UIViewController"; title = "Movies"; ObjectID = "L5V-bE-GC7"; */
+"L5V-bE-GC7.title" = "الافلام";
+
+/* Class = "UILabel"; text = "Actor Name"; ObjectID = "Lgy-FG-7Qv"; */
+"Lgy-FG-7Qv.text" = "اسم الممثل";
+
+/* Class = "UILabel"; text = "Release Date"; ObjectID = "MGx-qo-yUE"; */
+"MGx-qo-yUE.text" = "تاريخ الانتاج";
+
+/* Class = "UIButton"; configuration.title = "Refresh"; ObjectID = "PAd-cm-rkw"; */
+"PAd-cm-rkw.configuration.title" = "تحديث";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PAd-cm-rkw"; */
+"PAd-cm-rkw.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Release Date"; ObjectID = "Pc0-Eg-gFA"; */
+"Pc0-Eg-gFA.text" = "تاريخ الانتاج";
+
+/* Class = "UITextField"; placeholder = "Passward"; ObjectID = "QUy-Z8-QUs"; */
+"QUy-Z8-QUs.placeholder" = "الرقم السري";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "; ObjectID = "Rs5-wF-Zch"; */
+"Rs5-wF-Zch.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
+
+/* Class = "UILabel"; text = "Release Date"; ObjectID = "Stu-ct-dWJ"; */
+"Stu-ct-dWJ.text" = "تاريخ الانتاج";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "VCv-9k-k0O"; */
+"VCv-9k-k0O.configuration.title" = "تسجيل جديد";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VCv-9k-k0O"; */
+"VCv-9k-k0O.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "VhD-j3-ZOO"; */
+"VhD-j3-ZOO.text" = "العنوان";
+
+/* Class = "UILabel"; text = "Enjoy to watch Live Movies from Dubai One Channel"; ObjectID = "VkV-l1-YHj"; */
+"VkV-l1-YHj.text" = "استمتع بمشاهدة الافلام الحية من قناة دبي ون";
+
+/* Class = "UITextField"; placeholder = "repeat passwoard"; ObjectID = "Xm7-bf-cYr"; */
+"Xm7-bf-cYr.placeholder" = "اعادة ادخال كلمة المرور";
+
+/* Class = "UILabel"; text = "Contact us "; ObjectID = "Xmy-qM-tJM"; */
+"Xmy-qM-tJM.text" = "تواصل معنا";
+
+/* Class = "UILabel"; text = "Sign In "; ObjectID = "ZWG-G0-1xo"; */
+"ZWG-G0-1xo.text" = "تسجيل دخول";
+
+/* Class = "UITextField"; placeholder = "Passwoard ..."; ObjectID = "bkO-7H-IeY"; */
+"bkO-7H-IeY.placeholder" = "الرقم السري ...";
+
+/* Class = "UIButton"; configuration.title = "Favorites"; ObjectID = "cjK-TH-4vM"; */
+"cjK-TH-4vM.configuration.title" = "المفضلة";
+
+/* Class = "UILabel"; text = "Release Date: "; ObjectID = "eNn-Vc-Ge7"; */
+"eNn-Vc-Ge7.text" = "تاريخ الانتاج :";
+
+/* Class = "UIButton"; configuration.title = "Create Account"; ObjectID = "hXQ-qw-zja"; */
+"hXQ-qw-zja.configuration.title" = "انشاء حساب جديد";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hXQ-qw-zja"; */
+"hXQ-qw-zja.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "No Rating"; ObjectID = "iL7-7y-T26"; */
+"iL7-7y-T26.text" = "لايوجد تقييم";
+
+/* Class = "UIButton"; configuration.title = "Pause"; ObjectID = "jkR-h6-xPT"; */
+"jkR-h6-xPT.configuration.title" = "ايقاف مؤقت";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "jkR-h6-xPT"; */
+"jkR-h6-xPT.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "User Name Or Email ..."; ObjectID = "kHx-Nz-QQS"; */
+"kHx-Nz-QQS.placeholder" = "اسم المستخدم او البريد الالكتروني ...";
+
+/* Class = "UITabBarItem"; title = "About us"; ObjectID = "kNF-BC-fok"; */
+"kNF-BC-fok.title" = "حول";
+
+/* Class = "UITabBarItem"; title = "TV"; ObjectID = "lw7-Fh-4kh"; */
+"lw7-Fh-4kh.title" = "المسلسلات";
+
+/* Class = "UILabel"; text = "Movie Title"; ObjectID = "my1-K9-ANe"; */
+"my1-K9-ANe.text" = "عنوان الفيلم";
+
+/* Class = "UILabel"; text = "TV Name"; ObjectID = "nK2-Si-MqK"; */
+"nK2-Si-MqK.text" = "اسم المسلسل";
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "oqM-ho-89A"; */
+"oqM-ho-89A.title" = "المفضلة";
+
+/* Class = "UINavigationItem"; title = "Videos"; ObjectID = "qfi-5u-3SM"; */
+"qfi-5u-3SM.title" = "الفيديوهات";
+
+/* Class = "UILabel"; text = "Movie Title"; ObjectID = "rAV-Gd-A4A"; */
+"rAV-Gd-A4A.text" = "عنوان الفيلم";
+
+/* Class = "UILabel"; text = "Bio"; ObjectID = "sPr-wh-SC9"; */
+"sPr-wh-SC9.text" = "السيرة الذاتية";
+
+/* Class = "UILabel"; text = "No Rating"; ObjectID = "sa6-Sf-DZ1"; */
+"sa6-Sf-DZ1.text" = "لايوجد تقييم";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "uu7-f3-zgj"; */
+"uu7-f3-zgj.title" = "المفضلة";
+
+/* Class = "UILabel"; text = "Appears In:"; ObjectID = "wuG-US-weT"; */
+"wuG-US-weT.text" = "شارك في :";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "yB6-Ky-GQz"; */
+"yB6-Ky-GQz.text" = "حول";
+
+/* Class = "UIButton"; configuration.title = "Play"; ObjectID = "yWp-ye-e8U"; */
+"yWp-ye-e8U.configuration.title" = "تشغيل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yWp-ye-e8U"; */
+"yWp-ye-e8U.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "zKr-UQ-1zC"; */
+"zKr-UQ-1zC.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";

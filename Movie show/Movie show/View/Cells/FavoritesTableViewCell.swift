@@ -21,7 +21,7 @@ class FavoritesTableViewCell: UITableViewCell {
     let db = Firestore.firestore()
     
     var favsMoviesIds:[Int] = []
-//    var movies : [Movie] = []
+
     var movies: Movie? {
         didSet {
         updateViews()

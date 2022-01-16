@@ -28,63 +28,12 @@ class TvDetailViewController: UIViewController {
     @IBOutlet weak var trailersCollection: UICollectionView!
     @IBOutlet weak var circularProgrss: CircularProgressView!
     
-    
-    @IBOutlet weak var changeButtonFav: UIButton!
-    @IBAction func addToFave(_ sender: UIButton) {
-        
-        if isActive {
-            isActive = false
-            changeButtonFav.setImage(UIImage(systemName: "heart"), for: .normal)
-        } else {
-            
-            isActive = true
-            changeButtonFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        }
-        
-        
-        let alert = UIAlertController(title: "Favorites", message: "Done to add the Tv Show to Favorites", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        
-        
-         
-         if let uid = Auth.auth().currentUser?.uid {
-             
-             var favsData = ["favs": []]
-             
-             
-            let doc =  db.collection("Favorites").document(uid)
-             doc.getDocument { (document, error) in
-                 if let document = document, document.exists {
-                     let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                     print("Document data: \(dataDescription)")
-                     favsData = document.data() as? [String : [Any]] ?? [String: [Any]]()
-                     favsData["favs"]?.append(self.tvID ?? 0)
-                     self.saveFavsToFireStore(favsData: favsData)
-                 } else {
-                     print("Document does not exist")
-                 }
-             }
-         
-             
-         }
-        
-        
-    }
+    // Add Tv show to Favorites here :-
     
     
-    func saveFavsToFireStore(favsData : [String : Any]){
-        
-        if let uid = Auth.auth().currentUser?.uid {
-            db.collection("Favorites").document(uid).setData(favsData, merge: true,  completion: { error in
-                
-                if let error = error {
-                    print(error)
-                }
-                
-            })
-        }
-    }
+    
+    // point
+
     
     
     override func viewDidLoad() {

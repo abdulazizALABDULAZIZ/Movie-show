@@ -52,7 +52,6 @@ class UpcomingRow: UITableViewCell {
 
 
 
-//        upcomingCollectionView.scrollToItem(at: IndexPath(item: movies.count, section:0), at: .centeredHorizontally, animated: true)
 
 
     }

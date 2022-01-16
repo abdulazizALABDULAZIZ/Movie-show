@@ -24,8 +24,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var CircularProgress: CircularProgressView!
     @IBOutlet weak var actorsCollection: UICollectionView!
     @IBOutlet weak var trailersCollection: UICollectionView!
-    //@IBOutlet weak var videoViewHeight: NSLayoutConstraint!
-    //@IBOutlet weak var castViewHeight: NSLayoutConstraint!
+    
 
 
     
@@ -43,16 +42,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var changeButton: UIButton!
     @IBAction func addToFav(_ sender: UIButton) {
         
-        if isActive {
-            
-            isActive = false
-            changeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-        } else {
-            
-            isActive = true
-            changeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        }
-    
+//      
         
         if let uid = Auth.auth().currentUser?.uid {
             
@@ -65,8 +55,35 @@ class DetailViewController: UIViewController {
                     let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                     print("Document data: \(dataDescription)")
                     favsData = document.data() as? [String : [Any]] ?? [String: [Any]]()
-                    favsData["favs"]?.append(self.movieID ?? 0)
-                    self.saveFavsToFireStore(favsData: favsData)
+                    let foundId = favsData["favs"]?.firstIndex(where: { elem in
+                        let movieId = elem as? Int
+                        return movieId == self.movieID
+                        
+                    })
+                    
+                    if foundId != nil {
+                        print("already added")
+                        //
+                        let alert = UIAlertController(title: "Favorites", message: "Already in Favorites", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        self.isActive = true
+                        self.changeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                        //
+                    } else {
+                       favsData["favs"]?.append(self.movieID ?? 0)
+                        self.saveFavsToFireStore(favsData: favsData)
+                        
+                        self.isActive = true
+                        self.changeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                        
+                        //
+                        let alert = UIAlertController(title: "Favorites", message: "Done to add the Movies to Favorites", preferredStyle: UIAlertController.Style.alert)
+                                alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                        //
+                    }
+                    
                 } else {
                     print("Document does not exist")
                 }
@@ -75,9 +92,9 @@ class DetailViewController: UIViewController {
             
         }
         
-        let alert = UIAlertController(title: "Favorites", message: "Done to add the Movies to Favorites", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: "Favorites", message: "Done to add the Movies to Favorites", preferredStyle: UIAlertController.Style.alert)
+//        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -198,7 +215,7 @@ class DetailViewController: UIViewController {
         backgroundImage.layer.mask = gradient
     }
 
-    /// Animation for average score
+//     Animation for average score
     @objc func animateProgress() {
         
         let cP = self.view.viewWithTag(101) as! CircularProgressView
@@ -282,7 +299,7 @@ extension DetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-// MARK: NOTE - May add cast later.
+// MARK: NOTE - May added cast later.
 //        if collectionView == self.actorsCollection{
 //            if let number = self.cast?.count{
 //                return number

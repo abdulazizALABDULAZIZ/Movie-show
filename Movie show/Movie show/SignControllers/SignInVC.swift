@@ -124,7 +124,7 @@ class SignInViewController: UIViewController {
         }
     }
         func showAlert (withTitel titel:String,messege:String,isLogin:Bool){
-            let alert = UIAlertController(title: "Erore", message: messege, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error", message: messege, preferredStyle: .alert)
             let okAcction = UIAlertAction(title: "ok", style: .default, handler: { action in if isLogin {
                 
             }else{

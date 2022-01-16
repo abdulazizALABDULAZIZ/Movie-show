@@ -22,25 +22,40 @@ class FavoritesViewController: UIViewController {
     var isActiveButton:Bool = false
     
     @IBOutlet weak var uiTableView: UITableView!
-//    @IBOutlet weak var posterImage: UIImageView!
-//    @IBOutlet weak var titleMovies: UILabel!
+
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        self.favsMoviesIds.removeAll()
+//
+//
+//        fetchFavsFromFireStore()
+//
+//        uiTableView.delegate = self
+//        uiTableView.dataSource = self
+//        self.uiTableView.reloadData()
+//
+//
+//        //         Do any additional setup after loading the view.
+//
+//    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        favsMoviesIds.removeAll()
+        
+        
+        fetchFavsFromFireStore()
+        uiTableView.delegate = self
+        uiTableView.dataSource = self
+        
         
         
 
-        
-        fetchFavsFromFireStore()
-                
-        uiTableView.delegate = self
-        uiTableView.dataSource = self
-//        deleteField()
-        self.uiTableView.reloadData()
-        
-        // Do any additional setup after loading the view.
-        
+//        self.uiTableView.reloadData()
+
     }
     
     
@@ -70,6 +85,8 @@ class FavoritesViewController: UIViewController {
     
     
     func fetchMoviesFromApi(){
+        movies = []
+//        movies.removeAll()
         for movieID in favsMoviesIds {
             client.movieDetail(movieID: movieID) { (movieRes:Movie) in
                 self.movies.append(movieRes)
@@ -107,20 +124,6 @@ class FavoritesViewController: UIViewController {
     }
     
     
-//    private func deleteField() {
-//            // [START delete_field]
-//            db.collection("Favorites").document("uid").updateData([
-//                "favs": FieldValue.delete(),
-//            ]) { err in
-//                if let err = err {
-//                    print("Error updating document: \(err)")
-//                } else {
-//                    print("Document successfully updated")
-//                }
-//            }
-//            // [END delete_field]
-//        }
-    
 
     /*
     // MARK: - Navigation
@@ -146,10 +149,11 @@ extension FavoritesViewController:UITableViewDelegate,UITableViewDataSource {
 
         let movie = movies[indexPath.row]
         cell.movies = movie
-//        movie = movies[indexPath.row].title
+
+        
         
 
-
+        
 
         return cell
 
@@ -159,10 +163,12 @@ extension FavoritesViewController:UITableViewDelegate,UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         guard movies.count > indexPath.row else { return }
         let movie = movies[indexPath.row]
-        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else {return}
         detailVC.movie = movie
         detailVC.movieID = movie.id
         self.showDetailViewController(detailVC, sender: self)
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -178,6 +184,7 @@ extension FavoritesViewController:UITableViewDelegate,UITableViewDataSource {
         let favsData = ["favs" : self.favsMoviesIds]
         self.saveFavsToFireStore(favsData: favsData)
         self.uiTableView.deleteRows(at: [indexPath], with: .automatic)
+          
       }
     }
     

@@ -33,7 +33,7 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
         return .lightContent
     }
     
-    /// Searches movies after selecting Search on bar
+//    / Searches movies after selecting Search on bar
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let searchTerm = searchBar.text ?? ""
         
