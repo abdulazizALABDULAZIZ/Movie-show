@@ -80,7 +80,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if let uid = Auth.auth().currentUser?.uid {
-            performSegue(withIdentifier: "ToHomeTB", sender: nil)
+//            performSegue(withIdentifier: "ToHomeTB", sender: nil)
         }
     }
     

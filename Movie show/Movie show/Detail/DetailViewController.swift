@@ -50,7 +50,7 @@ class DetailViewController: UIViewController {
             
             
            let doc =  db.collection("Favorites").document(uid)
-            doc.getDocument { (document, error) in
+            doc.getDocument { [self] (document, error) in
                 if let document = document, document.exists {
                     let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                     print("Document data: \(dataDescription)")
@@ -86,6 +86,45 @@ class DetailViewController: UIViewController {
                     
                 } else {
                     print("Document does not exist")
+                    favsData["favs"]?.append(self.movieID ?? 0)
+                     self.saveFavsToFireStore(favsData: favsData)
+                    //
+//                   let uid = Auth.auth().currentUser!.uid
+//                    var favsData = ["favs":[]]
+//
+//                    let newCityRef = db.collection("Favorites").document(uid)
+//
+//                           // later...
+//                           newCityRef.setData([
+//                               // [START_EXCLUDE]
+//                            uid:movieID ?? "nil"
+//                               // [END_EXCLUDE]
+//                           ])
+//                    return
+                    
+                    
+                    
+//                    if let uid = Auth.auth().currentUser?.uid {
+//
+//                        var favsData = ["favs": []]
+//
+//
+//                        let doc =  self.db.collection("Favorites").document(uid)
+//                        doc.getDocument { (document, error) in
+//                            if let document = document, document.exists {
+//                                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                                print("Document data: \(dataDescription)")
+//                                favsData = document.data() as? [String : [Any]] ?? [String: [Any]]()
+//                                _ = favsData["favs"]?.firstIndex(where: { elem in
+//                                    let movieId = elem as? Int
+//                                    return movieId == self.movieID
+//
+//                                })
+//
+//                            }
+//                        }
+//                    }
+                    //
                 }
             }
         
@@ -348,8 +387,8 @@ extension DetailViewController: UICollectionViewDataSource {
 //                    //trailerCell.setVideoImage(imageURL: videoImg)
 //                }
                 
-                let url = videoThumbURL
-                let data = try? Data(contentsOf: url!)
+                if      let url = videoThumbURL {
+                let data = try? Data(contentsOf: url)
                 trailerCell.imageView.image = UIImage(data: data!)
                 print("Image URL: \(String(describing: data)) and \(String(describing: videoThumbURL))")
                 
@@ -363,7 +402,7 @@ extension DetailViewController: UICollectionViewDataSource {
         
         return trailerCell
         
-   }
+   
     
 
     /*
@@ -378,5 +417,10 @@ extension DetailViewController: UICollectionViewDataSource {
     
     
     
+
+
+        }
+        return trailerCell
+    }
 
 }
